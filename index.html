@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <title>ze</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script type="text/javascript">
+
+    $(function(){
+
+      $(".box1").click(function(){
+             $('.box1').animate({left: '0%'});
+             $('.box2').animate({left: '0%'});
+             $('.box3').animate({left: '0%'});
+             $('.box4').animate({left: '0%'});
+         });
+
+       $(".box2").click(function(){
+              $('.box1').animate({left: '-70%'});
+              $('.box2').animate({left: '0%'});
+              $('.box3').animate({left: '0%'});
+              $('.box4').animate({left: '0%'});
+      });
+
+      $(".box3").click(function(){
+             $('.box1').animate({left: '-70%'});
+             $('.box2').animate({left: '-70%'});
+             $('.box3').animate({left: '0%'});
+             $('.box4').animate({left: '0%'});
+      });
+
+      $(".box4").click(function(){
+
+             $('.box1').animate({left: '-70%'});
+             $('.box2').animate({left: '-70%'});
+             $('.box3').animate({left: '-70%'});
+             $('.box4').animate({left: '0%'});
+      });
+    });
+
+    //<![CDATA[
+function calcHeight(){
+ //find the height of the internal page
+
+ var the_height=
+ document.getElementById('the_iframe').contentWindow.
+ document.body.scrollHeight;
+
+ //change the height of the iframe
+ document.getElementById('the_iframe').height=
+ the_height;
+
+ //document.getElementById('the_iframe').scrolling = "no";
+ document.getElementById('the_iframe').style.overflow = "hidden";
+}
+//
+
+
+
+  </script>
+
+
+
+
+  <body>
+
+    <div class="box1"></div>
+      <div class="box2"><div class="headline"><img src="지.png" width="80%"></div>
+      <div class="textbox">
+        <br> 한글꼴연구회 <br>
+        1992년에 설립되어 올해로 28년째를 맞이한 홍익대학교 시각디자인전공 학술 소모임, 한글꼴연구회는 디자이너의 시각에서 한글의 독창성과 실용성에 대한 실험과 연구를 해오고 있다.
+        회원들의 한글꼴 개발과 더불어 여러가지 전시를 열고 있으며, 매주 이뤄지는 학습과 발표를 통해 한글 타이포그라피에 대한 실험적 연구와 발전을 모색하고 있다.
+        <br>
+한글꼴연구회와 AK&이 협업하여 진행하는 <사랑과 존경을 담아> 전시는 애경그룹의 모토인 love&respect 에서 출발했다.
+25명의 한글꼴연구회 회원들이 참여하여 각자가 생각하는 사랑과 존경의 형태를 글자에 담아 냈다.
+      </div>
+    </div>
+      <div class="box3"><div class="headline"><img src="의.png" width="70%"></div>
+          <div class="textbox">
+            <br><br>
+            구혜민<br>
+            김은서<br>
+            김은재<br>
+            문서현<br>
+            문유경<br>
+            박주원<br>
+            배미현<br>
+            이수현<br>
+            이지현<br>
+            임수민<br>
+            장서영<br>
+            최지호<br>
+      </div>
+      </div>
+      <div class="box4"> <div class="headline"><img src="집.png" width="90%"> </div>
+      <div class="textbox">
+        <iframe src="https://zehousehangeulggol.cargo.site" id="the_iframe" onload="calcHeight();" name="" title="" frameborder="0"  style="overflow-x:hidden; overflow:auto; width:100%; min-height:900px;">
+          if not
+        </iframe>
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>
