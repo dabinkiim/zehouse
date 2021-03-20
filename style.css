@@ -12,6 +12,7 @@ html, body {width: 100%; height: 100%;}
 font-family: 'KOTRA_GOTHIC';
 background-image: url('ze-back.jpg');
 background-size: 50% auto; background-repeat: repeat;}
+body * { touch-action: none; }
 
   div {float:right;}
   ::-webkit-scrollbar {display: none;}
@@ -29,15 +30,19 @@ background-size: 50% auto; background-repeat: repeat;}
     opacity: 85%;
   }
 
-  .box1 {z-index: 4; width: 73%; height: 82%; top: 18%;
-    /* background-image: url('ddd.png');  */
-  background-size: auto 100%; background-repeat: no-repeat;}
+  .box1 {z-index: 4; width: 72%; height: 84%; top: 18%;}
+  .box1:hover {width: 73%;}
 
-  .box2 {z-index: 3; width: 80%; height: 86%; top: 14%;}
+  .box2 {z-index: 3; width: 79%; height: 88%; top: 14%;}
+  .box2:hover {width: 80%;}
 
-  .box3 {z-index: 2; width: 87%; height: 90%; top: 10%;}
+  .box3 {z-index: 2; width: 86%; height: 92%; top: 10%;}
+  .box3:hover {width: 87%;}
 
-  .box4 {z-index: 1; width: 94%; height: 94%; top: 6%;}
+  .box4 {z-index: 1; width: 93%; height: 96%; top: 6%;}
+  .box4:hover {width: 94%;}
+
+
 
   .headline {width: 6vw; margin: 0% 1%; display: inline-block; position: sticky; top: 1%; overflow: hidden; text-align: center; }
 
