@@ -1,43 +1,78 @@
 @font-face {
-  font-family: "Goyo";
-  src: url("Goyo-Light.otf") format("embedded-opentype");
+    font-family: 'KOTRA_GOTHIC';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 html, body {width: 100%; height: 100%;}
   body {padding: 0;margin: 0;
-  text-decoration: none; -ms-overflow-style: none;
-font-family: Goyo;
+  text-decoration: none; -ms-overflow-style: none; overflow: hidden;
+font-family: 'KOTRA_GOTHIC';
 background-image: url('ze-back.jpg');
 background-size: 50% auto; background-repeat: repeat;}
+
   div {float:right;}
   ::-webkit-scrollbar {display: none;}
 
-.box1, .box2, .box3, .box4 {
-  position: absolute;
-  overflow: hidden;
-  left: 0%;
-  font-size: 40px;
-  text-align: right;
-  background: #FFFFFF;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid white;
-  transition: all ease-in-out 1s 0s;
-  opacity: 85%;
+  .box1, .box2, .box3, .box4 {
+    position: absolute;
+    overflow: scroll;
+    left: 0%;
+    font-size: 1.2rem;
+    text-align: right;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    transition: all ease-in-out 1s 0s;
+    opacity: 85%;
+  }
+
+  .box1 {z-index: 4; width: 73%; height: 82%; top: 18%;
+    /* background-image: url('ddd.png');  */
+  background-size: auto 100%; background-repeat: no-repeat;}
+
+  .box2 {z-index: 3; width: 80%; height: 86%; top: 14%;}
+
+  .box3 {z-index: 2; width: 87%; height: 90%; top: 10%;}
+
+  .box4 {z-index: 1; width: 94%; height: 94%; top: 6%;}
+
+  .headline {width: 6vw; margin: 0% 1%; display: inline-block; position: sticky; top: 1%; overflow: hidden; text-align: center; }
+
+  .textbox {font-size: 1.2rem; line-height: 2rem; width: 70%; text-align: left;
+    padding: 2% 2% 1% 2%; position: relative;}
+
+  #line {position: inherit; width: 100%; height: 1vh; background-image: url('line.png'); background-size: 50% auto; margin: 4px 0px}
+
+  #screen-notice {z-index: 100; position: absolute; width: 100%;
+    text-align: center; height: 100vh; line-height: 100vh; font-size: 2rem;
+    background-color: white; opacity: 60%; visibility: hidden;}
+
+
+
+
+  /* 가로 */
+  @media (orientation: portrait) {
+    #screen-notice {visibility: visible;}
+  }
+
+  /* 세로 */
+  @media (orientation: landscape) {
+    #screen-notice {visibility: hidden;}
+  }
+
+
+  /* mobile */
+
+@media (max-width: 800px) {
+
+
+
+  .box1, .box2, .box3, .box4 {
+    font-size: 1.8rem;}
+
+  .textbox { font-size: 12px; line-height: 20px;}
+
 }
-
-.box1 {z-index: 4; width: 73%; height: 82%; top: 18%;
-  /* background-image: url('ddd.png');  */
-background-size: auto 100%; background-repeat: no-repeat;}
-
-.box2 {z-index: 3; width: 80%; height: 86%; top: 14%;}
-
-.box3 {z-index: 2; width: 87%; height: 90%; top: 10%;}
-
-.box4 {z-index: 1; width: 94%; height: 94%; top: 6%;}
-
-.headline {width: 6vw; margin: 0% 1%; display: inline-block; position: sticky; top: 1%; overflow: hidden;
-text-align: center; font-size: 40px; }
-
-.textbox {font-size: 1.2rem; line-height: 2rem; width: 70%; text-align: left;
-  padding: 2% 2% 1% 2%; position: relative;}
