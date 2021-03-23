@@ -6,7 +6,7 @@
     <title>Ze House</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap" rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:description" content="2021 SISO - 한글꼴연구회 전시 <Ze House>">
     <meta name="description" content="2021 SISO - 한글꼴연구회 전시 <Ze House>">
@@ -18,7 +18,13 @@
 
   <script type="text/javascript">
 
+  $(window).load(function(){
+         $(".loadingscreen").fadeOut();
+     });
+
     $(function(){
+
+
 
       $(".box1").click(function(){
              $('.box1').animate({left: '0%'});
@@ -50,22 +56,6 @@
       });
     });
 
-    //<![CDATA[
-function calcHeight(){
- //find the height of the internal page
-
- var the_height=
- document.getElementById('the_iframe').contentWindow.
- document.body.scrollHeight;
-
- //change the height of the iframe
- document.getElementById('the_iframe').height=
- the_height;
-
- //document.getElementById('the_iframe').scrolling = "no";
- document.getElementById('the_iframe').style.overflow = "hidden";
-}
-//
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -80,7 +70,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
   <body>
-  <div id="screen-notice"><img src="https://img.icons8.com/windows/96/000000/rotate-screen.png"/> </div>
+  <div class="loadingscreen"> <div class="loader4"></div> </div>
   <div id="logo"><img src="한글꼴연구회.png" style="width:100%; mix-blend-mode: darken;"></div>
     <div class="box1"></div>
       <div class="box2"><div class="headline"><img src="지.png" width="80%"></div>
