@@ -67,6 +67,11 @@ function calcHeight(){
 }
 //
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 
 
   </script>
@@ -76,7 +81,7 @@ function calcHeight(){
 
   <body>
   <div id="screen-notice"><img src="https://img.icons8.com/windows/96/000000/rotate-screen.png"/> </div>
-
+  <div id="logo"><img src="한글꼴연구회.png" style="width:100%; mix-blend-mode: darken;"></div>
     <div class="box1"></div>
       <div class="box2"><div class="headline"><img src="지.png" width="80%"></div>
       <div class="textbox" style="width:65%; padding-right:10%;">
